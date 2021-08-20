@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print my Name</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        input {
+            width: 40%;
+            height: 10vh;
+            border: 1px solid orangered;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: orangered;
+            color: white;
+            border: 1px solid orangered;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .showname{
+            color: red;
+            font-weight: 400;
+            font-size: 25px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input type="text" id="input" placeholder="Type your name here">
+        <div>
+            <button id="button">Show My Name</button>
+        </div>
+        <div class="showname">Kara</div>
+    </main>
+
+<script>
+    let a = document.getElementById('input')
+    let b = document.getElementById('button')
+    let c = document.querySelector('.showname')
+   
+    b.addEventListener('click', function print(){
+    if(a.value == ''){
+        alert('Please enter your name')
+    } else{
+        c.textContent = a.value
+
+    }
+    })
+</script>
+</body>
+
+</html>
